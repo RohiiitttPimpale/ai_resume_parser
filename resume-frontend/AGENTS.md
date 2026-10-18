@@ -1,0 +1,1 @@
+- Keep the resume parser single-page and presentational: visual effects live in global theme CSS and existing resume components so the mock API remains replaceable without UI changes.
