@@ -20,6 +20,7 @@ ENV/
 # Production build outputs
 dist/
 dist-ssr/
+.output/
 *.local
 
 # Environment variables

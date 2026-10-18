@@ -9,16 +9,24 @@ export type ParsedResume = {
   confidence: number; // 0 to 100
 };
 
-const API_URL = import.meta.env.VITE_API_URL ?? "http://localhost:8000";
+const rawBaseUrl = import.meta.env.VITE_API_URL ?? "http://localhost:8000";
+const API_URL = rawBaseUrl.replace(/\/+$/, "");
 
 export async function parseResume(file: File): Promise<ParsedResume> {
   const formData = new FormData();
   formData.append("file", file);
 
-  const response = await fetch(`${API_URL}/parse`, {
-    method: "POST",
-    body: formData,
-  });
+  let response: Response;
+  try {
+    response = await fetch(`${API_URL}/parse`, {
+      method: "POST",
+      body: formData,
+    });
+  } catch {
+    throw new Error(
+      "Cannot reach the server. It may be waking up, please try again in a minute."
+    );
+  }
 
   if (!response.ok) {
     let detail = "Failed to parse resume";
