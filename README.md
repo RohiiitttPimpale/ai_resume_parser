@@ -70,7 +70,7 @@ ai_resume_parser/
 
 2. Install Python dependencies:
    ```bash
-   pip install fastapi uvicorn spacy pdfplumber python-docx scikit-learn joblib
+   pip install -r requirements.txt
    ```
 
 3. Download the spaCy English language model:
