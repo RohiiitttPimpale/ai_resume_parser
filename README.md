@@ -127,12 +127,12 @@ ai_resume_parser/
   {
     "name": "Rohit Pimpale",
     "email": "pimpalerohit26@gmail.com",
-    "phone": "7709945775",
+    "phone": "1010101010",
     "skills": ["C++", "Docker", "Machine Learning", "Python", "SQL", "TypeScript"],
     "experience": [],
     "education": [
       {
-        "degree": "Bachelor of Engineering in Computer Engineering, CGPA: 8.59/10",
+        "degree": "Bachelor of Engineering in Computer Engineering, CGPA: 10/10",
         "institute": "Smt. Indira Gandhi College of Engineering",
         "year": "2024 – 2028"
       }
